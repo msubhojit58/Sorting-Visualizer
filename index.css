@@ -85,9 +85,7 @@ body {
 }
 
 
-/* Media Queries */
 
-/* For medium screens (tablets and small desktops) */
 @media (max-width: 768px) {
   .head {
     font-size: 1.5rem;
