@@ -53,6 +53,7 @@ body {
   margin-left: 37vw;
   margin-top: 4vw;
   margin-right: 1vw;
+  cursor: pointer;
 }
 
 .btn2 {
@@ -63,6 +64,7 @@ body {
   color: white;
   font-size: 16px;
   border: white;
+  cursor: pointer;
 }
 
 .theme-btn{
@@ -74,5 +76,10 @@ body {
   padding-right: 15px;
   padding-top: 8px;
   padding-bottom: 8px;
+  max-width: fit-content;
+  margin-inline: auto;
+  cursor: pointer;
+  margin-left: 680px;
+  margin-top: 30px;
 
 }

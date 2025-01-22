@@ -1,4 +1,9 @@
 const container = document.querySelector(".data-container");
+let themeButton = document.getElementsByClassName("theme-btn")[0];
+let mainContainer = document.getElementsByClassName("body-container");
+
+console.log(themeButton);
+console.log(mainContainer);
 
 // function to generate bars
 function generatebars(num = 20) {
@@ -132,3 +137,13 @@ function disable() {
   document.getElementById("Button2").disabled = true;
   document.getElementById("Button2").style.backgroundColor = "#d8b6ff";
 }
+
+//Dynamic toggle button functionality:
+
+themeButton.addEventListener("click", () => {
+  for (let i = 0; i < mainContainer.length; i++){
+    themeButton.style.backgroundColor = "white";
+    mainContainer[i].style.backgroundColor = "black";
+    
+  }
+})
