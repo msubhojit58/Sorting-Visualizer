@@ -2,8 +2,8 @@ const container = document.querySelector(".data-container");
 let themeButton = document.getElementsByClassName("theme-btn")[0];
 let mainContainer = document.getElementsByClassName("body-container");
 
-console.log(themeButton);
-console.log(mainContainer);
+console.log("Inside theme button:" ,themeButton);
+console.log("Inside theme button:",mainContainer);
 
 // function to generate bars
 function generatebars(num = 20) {
@@ -140,10 +140,25 @@ function disable() {
 
 //Dynamic toggle button functionality:
 
+//Can't add event listener directly to an HTMLCollection -->
+
+//Setting default txt 
+themeButton.textContent = "Dark";
 themeButton.addEventListener("click", () => {
   for (let i = 0; i < mainContainer.length; i++){
-    themeButton.style.backgroundColor = "white";
-    mainContainer[i].style.backgroundColor = "black";
+    if (mainContainer[i].style.backgroundColor == "rgb(255, 235, 211)" || mainContainer[i].style.backgroundColor=="") {
+      themeButton.style.backgroundColor = "white";
+      themeButton.style.color = "black";
+      themeButton.textContent = "Light";
+      mainContainer[i].style.backgroundColor = "#28282B";
+
+    }
+    else {
+      themeButton.style.backgroundColor = "black";
+      themeButton.style.color = "white";
+      themeButton.textContent = "Dark";
+      mainContainer[i].style.backgroundColor = "rgb(255, 235, 211)";
+    }
     
   }
 })
